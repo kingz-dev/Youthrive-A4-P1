@@ -518,7 +518,9 @@ html {
 .section3 {
   /* max-width: 120rem; */
   /* min-height: auto; */
-  background-color: #d7d7d7;
+  /* background-color: #d7d7d7; */
+  background: radial-gradient(rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%),
+    #fff;
   margin: 0 auto;
   /* text-align: center; */
 }
@@ -1036,15 +1038,169 @@ html {
 
 .cardContainer {
   max-width: 120rem;
-  min-height: 36rem;
   margin: 0 auto;
 }
 
 .card-list {
-  list-style-type: none;
-  /* width: 70%; */
-  /* margin: 10px auto; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* gap: 40px; */
+  grid-template-rows: repeat(2, 1fr);
+  /* gap: 1px; */
+  min-height: 30rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.card {
+  /* background-color: lightblue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  color: white;
+}
+
+.card-list .c2 .codedtxt {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.625rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.05938rem;
+  padding-bottom: 20px;
+}
+.card-list .c2 .cardtxt {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.00938rem;
+  padding-bottom: 20px;
+}
+.card-list .c2 h3 {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 127.9%; /* 1.99844rem */
+  letter-spacing: 0.32088rem;
+  padding-bottom: 20px;
+}
+
+.card-list .card-btn .skills-btn {
+  color: #fffbfb;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0 16px;
+  letter-spacing: 0.07125rem;
+  padding: 5px 20px;
+  border-left: 2px solid #fffbfb;
+  border-right: 2px solid #fffbfb;
+  text-decoration: none;
+}
+
+.card-list .c1 {
+  background-image: url("../images/radial-left.png");
+}
+.card-list .c2 {
+  background-image: url("../images/eatsome.png");
+}
+.card-list .c3 {
+  background-image: url("../images/carpackright.png");
+}
+.card-list .c4 {
+  background-image: url("../images/eatsomeleft.png");
+}
+.card-list .c5 {
+  background-image: url("../images/carparkcenter.png");
+}
+.card-list .c6 {
+  background-image: url("../images/radial-left.png");
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .card-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: auto;
+  }
+  .card {
+    width: 100%;
+    height: 13rem;
+  }
+  .card-list .c1 {
+    display: none;
+  }
+  .card-list .c5 {
+    display: none;
+  }
+  .card-list .c6 {
+    display: none;
+  }
+
+  .card-list .c2 .codedtxt {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.625rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.05938rem;
+    padding-bottom: 20px;
+  }
+  .card-list .c2 .cardtxt {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.00938rem;
+    padding-bottom: 20px;
+  }
+  .card-list .c2 h3 {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 127.9%; /* 1.99844rem */
+    letter-spacing: 0.32088rem;
+    padding-bottom: 20px;
+  }
+
+  .card-list .card-btn .skills-btn {
+    color: #fffbfb;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.07125rem;
+    padding: 5px 20px;
+    border-left: 2px solid #fffbfb;
+    border-right: 2px solid #fffbfb;
+    text-decoration: none;
+  }
 }
