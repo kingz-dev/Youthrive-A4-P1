@@ -235,7 +235,7 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  text-wrap: nowrap;
+  /* text-wrap: nowrap;  this is giving me error*/
   margin-top: 3.38rem;
 }
 
@@ -915,6 +915,22 @@ html {
     gap: 40px;
   }
 
+  .s-list .js {
+    display: none;
+  }
+  .s-list .react {
+    display: none;
+  }
+  .s-list .bootstrap {
+    display: none;
+  }
+  .s-list .git {
+    display: none;
+  }
+  .s-list .figma {
+    display: none;
+  }
+
   .s-list img {
     width: 50px;
     height: 50px;
@@ -931,7 +947,7 @@ html {
   }
 
   .skillContainer .mobilehide {
-    display: hide;
+    display: none;
   }
 }
 
@@ -1202,5 +1218,168 @@ html {
     border-left: 2px solid #fffbfb;
     border-right: 2px solid #fffbfb;
     text-decoration: none;
+  }
+}
+
+/* last strip */
+.laststrip {
+  margin: 0 auto;
+  height: 2rem;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding-top: 5px;
+}
+
+.laststrip .ls-ext {
+  text-align: center;
+}
+
+.laststrip .ls-ext p {
+  color: #fffbfb;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .laststrip {
+    height: 2rem;
+  }
+
+  .laststrip .ls-ext p {
+    color: #fffbfb;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 5px;
+  }
+}
+
+/* entire section container */
+.section5 {
+  background: radial-gradient(rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%),
+    #fff;
+  margin: 0 auto;
+}
+
+/* Contact Part */
+.coContainer {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.coContainer .contactMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 18rem;
+  padding-top: 5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.coContainer .contactMe .contactMe-btn {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 127.9%; /* 2.39813rem */
+  letter-spacing: 0.66631rem;
+  text-decoration: none;
+  border: 7px solid #000;
+  padding: 1rem 2rem;
+}
+
+.coContainer .contactMe .contact-Desktop {
+  margin: 1.5rem 0 1.5rem 0;
+  padding: 0 12rem;
+  color: #050505;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 138.682%; /* 1.30013rem */
+}
+
+.coContainer .contactMe .contact-mobile {
+  display: none;
+}
+
+/* above here is Desktop view */
+@media screen and (max-width: 961px) {
+  .coContainer .contactMe .contact-Desktop {
+    padding: 0 5rem;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .coContainer .contactMe {
+    padding-top: 4rem;
+  }
+
+  .coContainer .contactMe .contactMe-btn {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 127.9%; /* 1.11913rem */
+    letter-spacing: 0.38094rem;
+    border: 6px solid #000;
+    padding: 1rem 1.75rem;
+  }
+
+  .coContainer .contactMe .contact-mobile {
+    display: unset;
+    margin: 1.25rem 0 1.5rem 0;
+    padding: 0 3.7rem;
+    color: #000;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .coContainer .contactMe .contact-Desktop {
+    display: none;
+  }
+}
+
+/* About Me separator */
+.section5 .separator {
+  width: 8rem;
+  height: 3rem;
+  background-image: url("../images/separatorBlack\ 2.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .section5 .separator {
+    width: 6rem;
+    height: 2rem;
   }
 }
