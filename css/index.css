@@ -1,0 +1,1050 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 120rem;
+  font-size: 1rem;
+}
+
+.section1 {
+  max-width: 120rem;
+  min-height: 95vh;
+  border: 1px solid transparent;
+  background-image: url("../imgs/section1-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 65% 100%;
+  background-color: #d7d7d7;
+}
+
+.section1 nav {
+  margin-top: 2.5rem;
+  padding-left: 10vw; /* 15 */
+}
+
+.section1 ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  /* border: 1px solid red; */
+}
+
+.section1 .group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  /* padding-left: 15rem;  */
+  /*added bc of unnessary shift to d left after menu was added  */
+  gap: 2rem;
+}
+
+.section1 .group a {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  max-width: 9.1875rem;
+  height: 2.875rem;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.section1 .group .contactMe {
+  /* text-wrap: nowrap; */
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 1.875rem;
+  border: 4px solid #fff;
+  background: #fff;
+  padding: 0.8rem 1vw;
+}
+
+.section1 .logo-mobile {
+  display: none;
+}
+
+/*i applied this bcs the menu was still there even though it was gone when i used .menu which tagets the img instead of the li*/
+.section1 .dropdown {
+  display: none;
+}
+/* .section1 .menu {
+  display: none;
+} */
+
+/* above here is Desktop view */
+@media screen and (max-width: 961px) {
+  /* Q1 - why was ur zoom on 75% while doing the responsive mode because i noticed that the responsive width and height varies for each zoom value */
+  .section1 {
+    background-image: unset;
+    background-size: 100%;
+  }
+
+  .section1 .group a {
+    color: black;
+  }
+
+  .section1 .group {
+    padding-left: unset; /*added bc of unnessary shift to d left after menu was added  */
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .section1 nav {
+    height: 3.5625rem;
+    background-color: black;
+    margin-top: unset;
+    padding-left: 1.88rem;
+  }
+
+  .section1 .group {
+    display: none;
+    padding-left: unset; /*added bc of unnessary shift to d left after menu was added  */
+  }
+
+  .section1 .logo-mobile {
+    display: flex;
+    align-self: flex-start;
+  }
+
+  .section1 .logo-desktop {
+    display: none;
+  }
+
+  .section1 .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section1 ul {
+    height: inherit;
+  }
+
+  .section1 .menu {
+    display: flex;
+    padding-right: 1.27rem;
+  }
+
+  /*i applied this bcs the menu was still there even though it was gone */
+  .section1 .dropdown {
+    display: unset;
+  }
+}
+
+/* Menu  */
+
+/* Dropdown Button */
+.dropbtn {
+  /* background-color: #04AA6D; */
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  /* position: absolute; */
+  position: fixed;
+  /* right: 0; */
+  left: 0;
+  /* min-height: 3.5625rem; */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* min-width: 160px; */
+  width: 100%;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  height: 3.5625rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*.dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+/* line1 styles */
+.section1 .line1 {
+  margin-top: 2.12rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
+  grid-auto-rows: minmax(34rem, auto);
+}
+
+.section1 .boxa {
+  /* border: 1px solid red; */
+  padding-left: 10vw;
+}
+
+.section1 .boxa .text-desktop .one {
+  color: #000;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem; /*by 2 */
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 6.44rem; /* divide by 2 */
+}
+
+.section1 .boxa .text-desktop .two {
+  color: #000;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  font-size: 4.5vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-wrap: nowrap;
+  margin-top: 3.38rem;
+}
+
+.section1 .boxa .text-desktop .three {
+  color: #909090;
+  text-align: left;
+  font-family: Raleway;
+  font-size: 1.5625vw;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.section1 .text-mobile {
+  display: none;
+}
+
+.section1 .boxa .icons {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1.94rem;
+  align-items: center;
+}
+
+.section1 .icons .i {
+  width: 3.8125rem;
+  height: 3.5rem;
+  background: #c4c4c4;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.section1 .boxa .icon1 {
+  background-image: url("../imgs/at.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+.section1 .boxa .icon2 {
+  background-image: url("../imgs/github.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+.section1 .boxa .icon3 {
+  background-image: url("../imgs/linkedin.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+.section1 .boxb {
+  /* border: 1px solid red; */
+  background-image: url("../images/man.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 75% 100%;
+  position: relative;
+}
+
+.section1 .boxb .text {
+  position: absolute;
+  bottom: 0rem;
+  left: calc(100% / 2 - 8.5rem);
+  width: 8.5rem;
+  height: 3.75rem;
+  color: #000;
+  text-align: justify;
+  font-family: Roboto;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .section1 {
+    background-image: url("../images/Background-mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .section1 .text-mobile {
+    display: flex;
+  }
+
+  .section1 .text-desktop {
+    display: none;
+  }
+
+  .section1 .boxa {
+    padding: unset;
+    margin-top: 35vh;
+  }
+
+  .section1 .boxa .text-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section1 .text-mobile .one {
+    color: #fff;
+    text-align: center;
+    font-family: "Advent Pro", sans-serif;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .section1 .text-mobile .two {
+    color: #fff;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .section1 .text-mobile .three {
+    background-image: url("../imgs/separatorWhite\ 3.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 7.5rem;
+    height: 0.625rem;
+    margin-top: 0.88rem;
+  }
+
+  .section1 .boxa .icons {
+    justify-content: center;
+    margin-top: 1.75rem;
+  }
+
+  .section1 .icons .i {
+    background-color: unset;
+    box-shadow: unset;
+  }
+
+  .section1 .boxa .icon1 {
+    background-image: url("../imgs/at-m.svg");
+  }
+
+  .section1 .boxa .icon2 {
+    background-image: url("../imgs/github-m.svg");
+  }
+  .section1 .boxa .icon3 {
+    background-image: url("../imgs/linkedin-m.svg");
+  }
+
+  .section1 .boxb {
+    display: none;
+  }
+}
+
+/* IT BERREIS */
+.section2 {
+  max-width: 120rem;
+  min-height: 13rem;
+  /*min height made the height responsive w/o mobile responsiveness yet */
+  background-image: url("../images/Logo\ ITB.png");
+  background-size: 27%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-left: 3.5rem;
+  padding-bottom: 20px;
+}
+
+.section2 h2 {
+  padding-top: 2rem;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.34756rem;
+}
+
+.section2 p {
+  /* width: 50rem; */
+  /* height: 5.5625rem; */
+  padding-top: 0.6rem;
+  padding-right: 25rem;
+  color: #fff;
+  text-align: justify;
+  font-family: "Open Sans";
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 138.682%; /* 1.30013rem */
+  margin-bottom: 1.25rem;
+}
+
+.section2 .more-desktop {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+
+.section2 .more-mobile {
+  display: none;
+}
+
+/* above here is Desktop view */
+@media screen and (max-width: 961px) {
+  .section2 {
+    background-size: 28%;
+    background-position: center right;
+  }
+
+  .section2 p {
+    padding-right: 15rem;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .section2 {
+    background-image: url("../imgs/IT-straight-mobile.svg"),
+      url("../imgs/ITlogomobile-IT.svg"), url("../imgs/Ellipse\ 1.svg"),
+      url("../imgs/Ellipse\ 2.svg");
+    background-size: 20%, 30%, 15%, 15%;
+    background-position: center, center, 52% 10%, 45% 15%;
+    padding: 1.25rem 3.06rem 3.8rem 3.06rem;
+    text-align: center;
+  }
+
+  .section2 h2 {
+    font-size: 1.5625rem;
+    letter-spacing: 0.28963rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .section2 p {
+    padding-right: unset;
+    padding-bottom: 1.8rem;
+  }
+
+  .section2 .more-mobile {
+    display: unset;
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding: 0px 40px;
+    margin-bottom: 20px;
+  }
+
+  .section2 .more-desktop {
+    display: none;
+  }
+}
+
+/* About Section */
+
+/* entire section container */
+.section3 {
+  /* max-width: 120rem; */
+  /* min-height: auto; */
+  background-color: #d7d7d7;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+/* About Me Part */
+.amContainer {
+  max-width: 120rem;
+  /* min-height: auto; */
+  margin: 0 auto;
+}
+
+.amContainer .aboutMe {
+  /* width: 70%; */
+  /* check later for this */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 24rem;
+  padding-top: 7rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.amContainer .aboutMe .aboutMe-btn {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 127.9%; /* 2.39813rem */
+  letter-spacing: 0.66631rem;
+  text-decoration: none;
+  border: 7px solid #000;
+  padding: 1.25rem 2rem;
+}
+
+.amContainer .aboutMe .aMeText-Desktop {
+  margin: 2.5rem 0 2rem 0;
+  padding: 0 16rem;
+  color: #050505;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 138.682%; /* 1.30013rem */
+}
+
+.amContainer .aboutMe .explore-btn {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  padding: 0px 20px;
+  /* margin-bottom: 20px; */
+}
+
+.amContainer .aboutMe .aMeText-mobile {
+  display: none;
+}
+
+/* above here is Desktop view */
+@media screen and (max-width: 961px) {
+  .amContainer .aboutMe .aMeText-Desktop {
+    padding: 0 5rem;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .amContainer .aboutMe {
+    padding-top: 4rem;
+  }
+
+  .amContainer .aboutMe .aboutMe-btn {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 127.9%; /* 1.11913rem */
+    letter-spacing: 0.38094rem;
+    border: 6px solid #000;
+    padding: 1rem 1.75rem;
+  }
+
+  .amContainer .aboutMe .aMeText-mobile {
+    display: unset;
+    margin: 1.25rem 0 1.5rem 0;
+    padding: 0 3.7rem;
+    color: #000;
+    text-align: justify;
+    font-family: "Open Sans";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .amContainer .aboutMe .explore-btn {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.08125rem;
+    text-decoration: none;
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    padding: 0px 20px;
+    margin-bottom: 5px;
+  }
+
+  .amContainer .aboutMe .aMeText-Desktop {
+    display: none;
+  }
+}
+
+/* About Me separator */
+.section3 .separator {
+  width: 8rem;
+  height: 3rem;
+  background-image: url("../images/separatorBlack\ 2.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .section3 .separator {
+    width: 6rem;
+    height: 2rem;
+  }
+}
+
+/* Ability Part */
+.abiContainer {
+  max-width: 120rem;
+  /* min-height: auto; */
+  /* background-color: orange; */
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.abiContainer .parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px auto;
+  /* background-color: rgb(111, 218, 40); */
+  width: 80%;
+}
+.abiContainer .parent .i {
+  width: 350px;
+  height: 150px;
+  /* border: 2px solid blue; */
+  padding: 20px 20px 20px 30px;
+  margin: 10px auto;
+}
+
+.i:nth-of-type(3) {
+  grid-column: 1 / 3;
+}
+
+.abiContainer .parent .i {
+  position: relative;
+}
+
+.abiContainer .parent h3 {
+  padding-top: 5px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.25488rem;
+}
+
+.abiContainer .parent p {
+  padding-top: 15px;
+  color: #000;
+  text-align: justify;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.abiContainer .parent .box1 .designIcon {
+  background-image: url("../imgs/pencil.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 1px;
+  bottom: 90px;
+}
+.abiContainer .parent .box2 .devIcon {
+  background-image: url("../imgs/devicon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 1px;
+  bottom: 90px;
+}
+.abiContainer .parent .box3 .mainIcon {
+  background-image: url("../imgs/laptop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 1px;
+  bottom: 90px;
+}
+
+/* above here is Desktop view */
+@media screen and (max-width: 961px) {
+  .abiContainer .parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+
+  .i:nth-of-type(3) {
+    grid-column: unset;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .abiContainer .parent {
+    flex-direction: column;
+    width: 100%;
+  }
+  .abiContainer .parent h3 {
+    font-size: 1rem;
+  }
+
+  .abiContainer .parent p {
+    padding-top: 15px;
+    color: #000;
+    text-align: justify;
+    font-family: "Open Sans";
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+
+/* Skills Part */
+.skillContainer {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.skillContainer .s-intro {
+  margin: 50px auto;
+  text-align: center;
+  width: 70%;
+  /* padding: 20px auto; */
+}
+
+.skillContainer .s-intro .skills-btn {
+  margin: 20px auto;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 127.9%; /* 2.39813rem */
+  letter-spacing: 0.66631rem;
+  text-decoration: none;
+  border: 7px solid #000;
+  padding: 0.5em 3.5rem;
+}
+
+.skillContainer .s-intro .usingNow {
+  padding-top: 80px;
+  text-align: left;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.34756rem;
+}
+
+.skillContainer .s-list {
+  width: 70%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.s-list .s-img {
+  padding: 10px 10px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.s-list img {
+  width: 60px;
+  height: 60px;
+}
+
+.s-list p {
+  color: #000;
+  /* text-align: center; */
+  font-family: Montserrat;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.20306rem;
+  padding-top: 10px;
+}
+
+.skillContainer .mobilehide {
+  background-color: transparent;
+}
+
+.skillContainer .l-intro {
+  margin: 20px auto;
+  text-align: center;
+  width: 70%;
+  /* padding: 20px auto; */
+}
+
+.skillContainer .l-intro .s-last {
+  padding-top: 40px;
+  text-align: left;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.34756rem;
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .skillContainer .s-intro .skills-btn {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 127.9%; /* 1.11913rem */
+    letter-spacing: 0.38094rem;
+    border: 6px solid #000;
+    padding: 1rem 1.75rem;
+  }
+  .skillContainer .s-intro .usingNow {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .skillContainer .s-list {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .s-list img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .s-list p {
+    font-size: 0.6rem;
+  }
+
+  .skillContainer .l-intro .s-last {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  .skillContainer .mobilehide {
+    display: hide;
+  }
+}
+
+/* Portfolio section */
+
+.section4 {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.section4 .portf {
+  max-width: 120rem;
+  min-height: 10rem;
+  background-image: url("../images/mountain-top.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portf .portf-btn {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 127.9%; /* 2.39813rem */
+  letter-spacing: 0.66631rem;
+  text-decoration: none;
+  border: 7px solid #000;
+  padding: 0.9rem 2rem;
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .portf .portf-btn {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 127.9%; /* 1.11913rem */
+    letter-spacing: 0.38094rem;
+    border: 6px solid #000;
+    padding: 1rem 1.75rem;
+  }
+}
+
+/* black strip coded */
+.stripcontainer {
+  margin: 0 auto;
+  height: 4rem;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.stripcontainer .box {
+  text-align: center;
+  width: 200px;
+  border-bottom: 1px solid #7c7c7c;
+}
+
+.stripcontainer .i {
+  border-bottom: 2px solid white;
+}
+
+.stripcontainer .box p {
+  color: #7c7c7c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+
+.stripcontainer .box .text-i {
+  color: white;
+}
+
+/* Mobile view */
+@media screen and (max-width: 740px) {
+  .stripcontainer {
+    height: 8rem;
+  }
+
+  .stripcontainer .box p {
+    color: #7c7c7c;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 5px;
+  }
+}
+
+/* card section */
+
+.cardContainer {
+  max-width: 120rem;
+  min-height: 36rem;
+  margin: 0 auto;
+}
+
+.card-list {
+  list-style-type: none;
+  /* width: 70%; */
+  /* margin: 10px auto; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 40px; */
+}
